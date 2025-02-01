@@ -12,10 +12,5 @@ int main()
 
 	hello.print();
 
-	int ma;
-
-	ma = 10 * 24123;
-
-
 	return 0; 
 }
