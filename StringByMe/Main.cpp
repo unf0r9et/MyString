@@ -12,9 +12,8 @@ int main()
 
 	hello.print();
 
-	MyString ha;
 
-	ha =hello + "hahah";
+
 
 	return 0; 
 }
