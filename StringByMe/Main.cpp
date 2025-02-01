@@ -12,7 +12,7 @@ int main()
 
 	hello.print();
 
-
+	int ma;
 
 
 	return 0; 
