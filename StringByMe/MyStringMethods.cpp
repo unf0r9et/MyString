@@ -1,6 +1,7 @@
 
 #include "MyString.h"
 
+
 MyString::MyString(char* string)
 {
 	this->length = strlen(string);
@@ -10,6 +11,8 @@ MyString::MyString(char* string)
 	{
 		this->string[i] = string[i];
 	}
+
+	this->idOfString = id++;
 }
 
 MyString::MyString(const char* string)
@@ -21,6 +24,8 @@ MyString::MyString(const char* string)
 	{
 		this->string[i] = string[i];
 	}
+	this->idOfString = id++;
+	
 }
 
 MyString::MyString(const MyString& other) {
@@ -39,11 +44,15 @@ MyString::MyString(const MyString& other) {
 		this->string[i] = other.string[i];
 	}
 	this->string[length] = '\0';
+
+	this->idOfString = id++;
 }
 
 MyString::MyString()
 {
 	this->string = nullptr;
+
+	this->idOfString = id++;
 }
 
 MyString::~MyString()
@@ -51,6 +60,9 @@ MyString::~MyString()
 	delete[] this->string;
 }
 
+
+
+//methods of class
 int MyString::lengthS()
 {
 	return this->length;
@@ -62,6 +74,13 @@ void MyString::print() {
 		std::cout << this->string[i];
 	}
 }
+
+void MyString::getId()
+{
+	std::cout << "\n\t||ID:" << this->idOfString;
+}
+
+
 
 MyString MyString::operator +(const char* otherstring)
 {
@@ -100,3 +119,17 @@ MyString& MyString::operator =(const MyString& otherstring)
 
 	return *this;
 }
+
+
+
+//static variables
+int MyString::id = 0;
+
+
+
+//friend functions
+int lengthOfString(const MyString& otherstring)
+{
+	return otherstring.length;
+}
+
