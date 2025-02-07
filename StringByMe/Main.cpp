@@ -13,6 +13,12 @@ int main()
 	MyString string2("|Я люблю тебя|");
 	MyString string3("|143|");
 
+
+	int a; 
+	MyString lesson;
+
+
+
 	string1.print();
 	cout << endl;
 	string2.print();
@@ -24,6 +30,8 @@ int main()
 	cout << "\nLength of first string - " << lengthOfString(string1);
 	cout << "\nLength of second string - " << lengthOfString(string2);
 	cout << "\nLength of third string - " << lengthOfString(string3);
+
+
 
 	cout << "\n\n";
 
